@@ -8,22 +8,11 @@ init(autoreset=True)
 
 alphabetical = string.ascii_letters + string.digits
 
-print(Fore.LIGHTMAGENTA_EX + f"""
-
-      """ + Fore.LIGHTCYAN_EX + """------------------------"""+ Fore.LIGHTMAGENTA_EX +"""---------------------------""" + Fore.LIGHTCYAN_EX + """--------------------"""+ Fore.LIGHTMAGENTA_EX +"""
-
-                                     Generator
-
-      
-
-                                 select 1 to generate
-      
-      -----------------------""" + Fore.LIGHTCYAN_EX + """--------------------------"""+ Fore.LIGHTMAGENTA_EX +"""----------------------
-""")
+print("Select 1 to generate")
 
 selection = input(Style.BRIGHT + f'select: ')
 
-if selection == '1':
+if selection == '1' or 'one':
     with open("generate.txt", "w") as f:
         times = int(input("how many codes: "))
         for i in range(times):
