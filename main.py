@@ -12,7 +12,7 @@ print("Select 1 to generate")
 
 selection = input(Style.BRIGHT + f'select: ')
 
-if selection == '1' or 'one':
+if selection in ("1","one"):
     with open("generate.txt", "w") as f:
         times = int(input("how many codes: "))
         for i in range(times):
@@ -25,3 +25,4 @@ if selection == '1' or 'one':
     input(Style.BRIGHT + Fore.LIGHTMAGENTA_EX + f"Press to exit.")
 else:
     print(f'Invalid Selection, Please Try Again!')
+
