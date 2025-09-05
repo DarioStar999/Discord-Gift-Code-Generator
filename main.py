@@ -16,7 +16,7 @@ if selection in ("1","one"):
     with open("generate.txt", "w") as f:
         times = int(input("how many codes: "))
         for i in range(times):
-            random_alphabetical = ''.join(random.choice(alphabetical) for i in range(16))
+            random_alphabetical = ''.join(random.choice(alphabetical) for _ in range(16))
             code = "https://discord.gift/" + random_alphabetical
             print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + f"Generated {i + 1} / {times}")
             f.write(code + "\n")
@@ -25,4 +25,5 @@ if selection in ("1","one"):
     input(Style.BRIGHT + Fore.LIGHTMAGENTA_EX + f"Press to exit.")
 else:
     print(f'Invalid Selection, Please Try Again!')
+
 
