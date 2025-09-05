@@ -10,7 +10,7 @@ alphabetical = string.ascii_letters + string.digits
 
 print("Select 1 to generate")
 
-selection = input(Style.BRIGHT + f'select: ')
+selection = input(Style.BRIGHT + f'select: ').lower()
 
 if selection in ("1","one"):
     with open("generate.txt", "w") as f:
@@ -25,5 +25,6 @@ if selection in ("1","one"):
     input(Style.BRIGHT + Fore.LIGHTMAGENTA_EX + f"Press to exit.")
 else:
     print(f'Invalid Selection, Please Try Again!')
+
 
 
